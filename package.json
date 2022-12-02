@@ -6,6 +6,10 @@
         "build": "parcel build"
     },
     "devDependencies": {
+        "@parcel/transformer-sass": "^2.8.0",
         "parcel": "^2.8.0"
+    },
+    "dependencies": {
+        "bootstrap-icons": "^1.10.2"
     }
 }

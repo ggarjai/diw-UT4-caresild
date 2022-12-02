@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
-
+//reset {
 * {
     padding: 0;
     margin: 0;
@@ -10,6 +10,11 @@
 
 body {
     margin: 0
+}
+
+section {
+    overflow: hidden;
+    padding: 0;
 }
 
 h1 {
@@ -23,7 +28,7 @@ h2 {
 p {
     font-size: 18px;
 }
-
+//}
 @mixin boxShadow( $boxShadow : 2px 2px 2px rgba(0, 0, 0, 0.25), $borderRadius : 1px, $transition : 0.2 ){
     box-shadow: $boxShadow;
     border-radius: $borderRadius;
@@ -42,28 +47,40 @@ p {
     $green: #1DD200;
 
 
-    
-
-
-
-
-section {
-    overflow: hidden;
-    padding: 0;
-}
-
 .logo {
 
+
+    img {
+        width: 350px;
+        padding-bottom: 10px;
+        justify-content: center;
+        vertical-align: middle;
+        transition: 0.4s;
+
+        &:hover {
+            width: 450px;
+            padding-bottom: 10px;
+            justify-content: center;
+            vertical-align: middle;
+            transition: 0.4s;
+        }
+    }
+
 }
+
+
+
 
 .slider {
     /*background:rgba(0, 0, 0, 0) url(./img/slider1-1.jpg) no-repeat center;*/
-   
     width: 100%;
     max-height: 540px;
     object-fit: cover;
     
 }
+
+
+
 
 .nav {
 
@@ -104,8 +121,6 @@ section {
     @include boxShadow();
 }
 
-    
-
     .nav-links {
         list-style: none;
         display: flex;
@@ -132,17 +147,17 @@ section {
         
             /* Sombras texto */
             @include boxShadow();
+
+            &:hover {
+                color: $black;
+                background-color: $green;
+                opacity: 1;
+                transition: 0.4s;
+                /* Sombras texto */
+                @include boxShadow();
+            }
         }
         
-        #register:hover {
-            color: $black;
-            background-color: $green;
-            opacity: 1;
-            transition: 0.4s;
-        
-            /* Sombras texto */
-            @include boxShadow();
-        }
     
         .carrito {
             opacity: 0.7;
@@ -161,8 +176,6 @@ section {
             
             padding-right: 250px;
             
-            
-            
         }
 
         .input {
@@ -179,51 +192,59 @@ section {
 
 }
 
-.responsive {
-    width: 100%;
-    height: auto;
-}
 
-  
-.logo img {
-    width: 350px;
 
-    &:hover {
-        width: 450px;
-    }
-}
 
-.logo img:hover {
-    
-}
-
-.logo img, .logo img:hover {
-    padding-bottom: 10px;
-    justify-content: center;
-    vertical-align: middle;
-    transition: 0.4s;
-}
-
+//cajas azules inferiores
 .boxes {
 
     display: flex;
     justify-content: center;
     align-items: center;
+    
 
     .blueBox {
-
-        
+        padding: 35px;
         background-color: $genBlue;
         height: 342px;
         width: 342px;
-        max-width: 342px;
         min-width: 342px;
+        max-width: 342px;
         color: white;
         margin: 20px;
         text-align: center;
+        border-radius: 3px;
+        opacity: 1;
+        transition: 0.2s;
 
+        &:hover {
+            background-color: $steelBlue;
+            opacity: 1;
+            transition: 0.2s;
+
+            svg:hover {
+                max-width: 120px;
+                max-height: 120px;
+                
+            }
+        }
+
+
+        svg {
+            width: 90px;
+            height: 90px;
+            padding-top: 10px;
         
-    
+
+        }
+
+        h1 {
+            
+        }
+
+        p {
+            padding-top: 30px;
+        }
     }
 
 
