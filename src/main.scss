@@ -1,0 +1,22 @@
+//SASS base
+@import './sass/base/reset';
+@import './sass/base/typography';
+@import './sass/components/buttons';
+
+//SASS layout
+@import './sass/layout/footer';
+@import './sass/layout/header';
+@import './sass/layout/navigation';
+
+//SASS pages
+@import './sass/pages/contacto';
+@import './sass/pages/especialistas';
+@import './sass/pages/home';
+@import './sass/pages/login';
+
+//SASS themes
+//@import './sass/themes';
+
+//SASS utilities
+@import './sass/utilities/mixins';
+@import './sass/utilities/variables';

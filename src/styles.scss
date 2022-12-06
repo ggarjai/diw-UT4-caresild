@@ -1,85 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+//SASS base
+@import './sass/base/reset';
+@import './sass/base/typography';
+@import './sass/components/buttons';
 
-//reset {
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: Lato, sans-serif;
-}
+//SASS layout
+@import './sass/layout/footer';
+@import './sass/layout/header';
+@import './sass/layout/navigation';
 
-body {
-    margin: 0
-}
+//SASS pages
+@import './sass/pages/contacto';
+@import './sass/pages/especialistas';
+@import './sass/pages/home';
+@import './sass/pages/login';
 
-section {
-    overflow: hidden;
-    padding: 0;
-}
+//SASS themes
+//@import './sass/themes/';
 
-h1 {
-    font-size: 60px;
-}
-
-h2 {
-    font-size: 36px;
-}
-
-p {
-    font-size: 18px;
-}
-//}
-@mixin boxShadow( $boxShadow : 2px 2px 2px rgba(0, 0, 0, 0.25), $borderRadius : 1px, $transition : 0.2 ){
-    box-shadow: $boxShadow;
-    border-radius: $borderRadius;
-    transition: $transition;
-}
-
-//Colores
-    $black: #222222;
-    $grey: #5A5A5A;
-    $lightGrey: #E9E9E9;
-    $genBlue: #0E294B;
-    $cerulean: #0096D2;
-    $steelBlue: #4682B4;
-    $limeRoseGreen: #15490C;
-    $peaGreen: #5AC348;
-    $green: #1DD200;
-
-
-.logo {
-
-
-    img {
-        width: 350px;
-        padding-bottom: 10px;
-        justify-content: center;
-        vertical-align: middle;
-        transition: 0.4s;
-
-        &:hover {
-            width: 450px;
-            padding-bottom: 10px;
-            justify-content: center;
-            vertical-align: middle;
-            transition: 0.4s;
-        }
-    }
-
-}
-
-
-
-
-.slider {
-    /*background:rgba(0, 0, 0, 0) url(./img/slider1-1.jpg) no-repeat center;*/
-    width: 100%;
-    max-height: 540px;
-    object-fit: cover;
-    
-}
-
-
+//SASS utilities
+@import './sass/utilities/mixins';
+@import './sass/utilities/variables';
 
 
 .nav {
@@ -98,6 +38,7 @@ p {
     align-items: center;
     align-content: center;
     z-index: 1;
+
     @include boxShadow(0px 12px 9px rgba(0, 0, 0, 0.4), 2px, 0);
     
     /* Elementos de la barra de navegacion */ 
@@ -159,6 +100,9 @@ p {
         }
         
     
+
+
+
         .carrito {
             opacity: 0.7;
             width: 40px;
@@ -182,71 +126,124 @@ p {
             border-width: 2px;
             padding: 10px 20px 10px 10px;
             position: relative;
-            background-color: $steelBlue;
+            //background-color: $steelBlue;
             box-shadow: inset 6px 6px 12px rgba(0, 0, 0, 0.4);
-            border-radius: 2px;
+            border-radius: 4px;
         }
     }
 
+.logo {
 
 
+    img {
+        width: 350px;
+        padding-bottom: 10px;
+        justify-content: center;
+        vertical-align: middle;
+        transition: 0.4s;
+
+        &:hover {
+            width: 450px;
+            padding-bottom: 10px;
+            justify-content: center;
+            vertical-align: middle;
+            transition: 0.4s;
+        }
+    }
+
+}
+
+}
+
+.container {
+    background-color: steelblue;
+    position: relative;
+    width: 500px;
+    max-width: 700px;
+    height: 500px;
+  }
+
+.slider {
+    /*background:rgba(0, 0, 0, 0) url(./img/slider1-1.jpg) no-repeat center;*/
+    display: flex;
+    
+    max-height: 545px;
+    
+    
+    img {
+        object-fit: cover;
+        width: 100%;
+    }
+
+}
+
+
+  
+  .image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+.slider2 {
+    /*background:rgba(0, 0, 0, 0) url(./img/slider1-1.jpg) no-repeat center;*/
+    width: 100%;
+    max-height: 540px;
+    object-fit: cover;
+    
 }
 
 
 
 
-//cajas azules inferiores
+
+
+
+
+//cajas inferiores
 .boxes {
 
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
+
+    .loginBox {
+        @include box();
+    }
 
     .blueBox {
-        padding: 35px;
-        background-color: $genBlue;
-        height: 342px;
-        width: 342px;
-        min-width: 342px;
-        max-width: 342px;
-        color: white;
-        margin: 20px;
-        text-align: center;
-        border-radius: 3px;
-        opacity: 1;
-        transition: 0.2s;
-
+        @include box( 30%, 20%, 342px, 342px, $genBlue, white, 35px, 20px 10px, 0px solid $black, center, 2px, 1, 8px 12px 4px rgba(0,0,0,0.4), 0.2);
         &:hover {
             background-color: $steelBlue;
-            opacity: 1;
-            transition: 0.2s;
-
-            svg:hover {
-                max-width: 120px;
-                max-height: 120px;
-                
-            }
-        }
-
-
-        svg {
-            width: 90px;
-            height: 90px;
-            padding-top: 10px;
-        
-
-        }
-
-        h1 {
-            
-        }
-
-        p {
-            padding-top: 30px;
+            transition: 0.2;
         }
     }
 
 
-}
 
+    svg {
+        width: 90px;
+        height: 90px;
+        padding-top: 10px;
+        
+            &:hover {
+                max-width: 120px;
+                max-height: 120px;
+                
+        }
+    }
+    
+    p {
+        padding-top: 30px;
+    }
+
+    h2 {
+        padding-top: 15px;  
+    }
+
+
+
+
+
+}
