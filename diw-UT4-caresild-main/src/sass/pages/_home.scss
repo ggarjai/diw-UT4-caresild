@@ -1,0 +1,92 @@
+//SASS utilities
+.container {
+    background-color: steelblue;
+    position: relative;
+    width: 500px;
+    max-width: 700px;
+    height: 500px;
+  }
+
+.slider {
+    /*background:rgba(0, 0, 0, 0) url(./img/slider1-1.jpg) no-repeat center;*/
+    display: flex;
+    
+    max-height: 545px;
+    
+    
+    img {
+        object-fit: cover;
+        width: 100%;
+    }
+
+}
+
+
+  
+  .image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+.slider2 {
+    /*background:rgba(0, 0, 0, 0) url(./img/slider1-1.jpg) no-repeat center;*/
+    width: 100%;
+    max-height: 540px;
+    object-fit: cover;
+    
+}
+
+
+
+
+
+
+
+
+//cajas inferiores
+.boxes {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    .loginBox {
+        @include box();
+    }
+
+    .blueBox {
+        @include box( 30%, 20%, 342px, 342px, $genBlue, white, 35px, 20px 10px, 0px solid $black, center, 2px, 1, 8px 12px 4px rgba(0,0,0,0.4), 0.2s ease all);
+        &:hover {
+            background-color: $steelBlue;
+            transition: 0.2s ease all;
+        }
+    }
+
+
+    svg {
+        width: 90px;
+        height: 90px;
+        padding-top: 10px;
+        
+            &:hover {
+                max-width: 120px;
+                max-height: 120px;
+                
+        }
+    }
+    
+    p {
+        padding-top: 30px;
+    }
+
+    h2 {
+        padding-top: 15px;  
+    }
+
+
+
+
+
+}

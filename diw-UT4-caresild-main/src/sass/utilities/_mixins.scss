@@ -1,0 +1,39 @@
+@mixin boxShadow( $boxShadow : 2px 2px 2px rgba(0, 0, 0, 0.25), $borderRadius : 1px, $transition : 0.2 ){
+    box-shadow: $boxShadow;
+    border-radius: $borderRadius;
+    transition: $transition;
+}
+
+@mixin box(
+    $heightBox : 360px,
+    $widthBox : 20%,
+    $minHeightBox : 340px,
+    $minWidthBox : 340px,
+    $bgColorBox : $lightGrey,
+    $colorBox : $black,
+    $paddingBox : 35px,
+    $marginBox : 20px 50px,
+    $borderBox : 0px solid $black,
+    $txtAlignBox : center,
+    $bRadiusBox : 3px,
+    $opacityBox : 1,
+    $boxShadow : 2px 2px 2px rgba(0, 0, 0, 0.25),
+    $transitionBox : 0.2s ease all){
+    
+        height: $heightBox;
+        width: $widthBox;
+        min-height: $minHeightBox;
+        min-width: $minWidthBox;
+        background-color: $bgColorBox;
+        color: $colorBox;
+        padding: $paddingBox;
+        margin: $marginBox;
+        border: $borderBox;
+        text-align: $txtAlignBox;
+        border-radius: $bRadiusBox;
+        opacity: $opacityBox;
+        box-shadow: $boxShadow;
+        transition: $transitionBox;
+
+
+}
