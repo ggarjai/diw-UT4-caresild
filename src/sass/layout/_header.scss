@@ -1,136 +1,157 @@
-@import '../utilities/mixins';
-@import '../utilities/variables';
 
 
-.nav {
+
+nav {
 
     /* Barra de navegacion */ 
     display: flex;
-    position: fixed;
-    height: 70px;
+    position: absolute;
+    height: 4.375rem;
     width: 100%;
-    margin: 35px 0px 0px 0px;
+    margin: 2.1875rem 0rem 0rem 0rem;
     background-color: $genBlue;
-    padding-left: 35px;
-    padding-right: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    align-content: center;
-    z-index: 1;
+    padding-left: 2.1875rem;
+    padding-right: .625rem;
 
-    @include boxShadow(0px 12px 9px rgba(0, 0, 0, 0.4), 2px, 0);
-    
-    /* Elementos de la barra de navegacion */ 
-    .nav-item a {
-    display: flex;
-    padding: 10px 30px;
-    text-decoration: none;
-    color: white;
-    border: 1px solid rgba(255, 255, 255, 0.5);
 
-    /* Sombras texto */
-    @include boxShadow(3px 3px 3px rgba(0, 0, 0, 0.25), 2px, 0.2);
-}
-  
-.nav-item:hover {
-    background-color: $steelBlue;
-    transition: 0.4s;
-    opacity: 1;
-    
-    /* Sombras texto */
-    @include boxShadow();
-}
+    z-index: 2;
+    box-shadow: .125rem .125rem 1.25rem;
 
-    .nav-links {
-        list-style: none;
+    @include boxShadow(0rem .75rem .5625rem rgba(0, 0, 0, 0.4), .125rem, 0);
+
+    @include movil(){
         display: flex;
+        position: fixed;
+        height: 4.375rem;
+        width: 100%;
+        margin: 0;
+        background-color: $genBlue;
+        padding-left: 0;
+        padding-right: 0;
+
+        justify-content: space-between;
         align-items: center;
-        padding-right: 50px;
-
-        .nav-links a:nth-of-type(1){
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .nav-item {
-            transition: 0.4s;
-        }
+        align-content: center;
+        z-index: 1;
+        box-shadow: .125rem .125rem 1.25rem;
+    }
     
-        #register {
-            display: inline-block;
-            text-decoration: none;
-            color: $lightGrey;
-            margin: 0px 25px;  
-            background: $peaGreen;
-            opacity: 0.8;
-            transition: 0.4s;
-        
-            /* Sombras texto */
-            @include boxShadow();
+    .navLinks {
+        width: 100%;
+        align-items: center;
+        display: flex;    
+        list-style: none;
+        //Ajustes de la barra de navegacion
+        justify-content: right;
+        padding-right: 1.125rem;
 
-            &:hover {
-                color: $black;
-                background-color: $green;
-                opacity: 1;
-                transition: 0.4s;
-                /* Sombras texto */
-                @include boxShadow();
+
+        li {
+        display: flex;
+
+            h2 {
+                padding-left: .625rem;
+                color: $steelBlue;
+
+
             }
-        }
+            .logo {
+                
+                width: 100%;
+
+                img {
+                    width: 8rem;
+                    padding: 0rem 0rem .625rem 2.8125rem;
+                    justify-content: center;
+                    vertical-align: middle;
+                    transition: 0.4s;
+
+                    @include movil(){
+                        width: 4rem;
+                        padding: 0rem 0rem 0rem .5rem;
+                        justify-content: center;
+                        vertical-align: middle;
+                        transition: 0.4s;
+                    }
+        
+                    &:hover {
+                        width: 10rem;
+                        padding-bottom: .625rem;
+                        justify-content: center;
+                        vertical-align: middle;
+                        transition: 0.4s;
+                        @include movil(){
+                            width: 4rem;
+                            padding-bottom: 0;
+                            justify-content: center;
+                            vertical-align: middle;
+                            transition: 0.4s;
+                        }
+                    }
+                
+                }
+
+                a {
+                    width: 100%;
+
+
+                }
+            }
+
+
+
+        
         
     
+    
+        
+        }
+        
 
 
+        .search {
+            padding-right: 1.625rem;
+            @include cuatroTercios(){
+                
+            }
+            @include tablet(){
+                display: none;
+            }
+            @include movil(){
+                display: none;
+            }
+
+            .input {
+                border-width: .125rem;
+                padding: .625rem 1.25rem .625rem .625rem;
+                position: relative;
+                //background-color: $steelBlue;
+                box-shadow: inset .375rem .375rem .75rem rgba(0, 0, 0, 0.4);
+                border-radius: .25rem;
+                
+                }
+        }
 
         .carrito {
             opacity: 0.7;
-            width: 40px;
+            width: 2.5rem;
             transition: 0.4s;
         
             &:hover {
                 opacity: 1;
-                width: 40px;
+                width: 2.5rem;
                 transition: 0.4s; 
-        
             }
         }
 
-        .search {
-            
-            padding-right: 250px;
-            
-        }
 
-        .input {
-            border-width: 2px;
-            padding: 10px 20px 10px 10px;
-            position: relative;
-            //background-color: $steelBlue;
-            box-shadow: inset 6px 6px 12px rgba(0, 0, 0, 0.4);
-            border-radius: 4px;
-        }
+
+
+
     }
 
-.logo {
-
-
-    img {
-        width: 350px;
-        padding-bottom: 10px;
-        justify-content: center;
-        vertical-align: middle;
-        transition: 0.4s;
-
-        &:hover {
-            width: 450px;
-            padding-bottom: 10px;
-            justify-content: center;
-            vertical-align: middle;
-            transition: 0.4s;
-        }
+    .navLogo {
+        justify-content: left;
     }
-
-}
 
 }

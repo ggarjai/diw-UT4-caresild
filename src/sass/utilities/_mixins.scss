@@ -1,39 +1,127 @@
-@mixin boxShadow( $boxShadow : 2px 2px 2px rgba(0, 0, 0, 0.25), $borderRadius : 1px, $transition : 0.2 ){
-    box-shadow: $boxShadow;
+@mixin boxShadow( $Shadow : .125rem .125rem .125rem rgba(0, 0, 0, 0.25), $borderRadius : 1px, $transition : 0.2 ){
+    text-shadow: $Shadow;
     border-radius: $borderRadius;
     transition: $transition;
 }
 
 @mixin box(
-    $heightBox : 360px,
-    $widthBox : 20%,
-    $minHeightBox : 340px,
-    $minWidthBox : 340px,
-    $bgColorBox : $lightGrey,
-    $colorBox : $black,
-    $paddingBox : 35px,
-    $marginBox : 20px 50px,
-    $borderBox : 0px solid $black,
-    $txtAlignBox : center,
-    $bRadiusBox : 3px,
-    $opacityBox : 1,
-    $boxShadow : 2px 2px 2px rgba(0, 0, 0, 0.25),
-    $transitionBox : 0.2){
+    //default properties
+       $boxHeight : 22.5rem,
+        $boxWidth : 22.5rem,
+    $boxMinHeight : 11.25rem,
+     $boxMinWidth : 11.25rem,
+    $boxMaxHeight : 18.75rem,
+     $boxMaxWidth : 18.75rem,
+    //colors
+      $boxBgColor : $lightGrey,
+        $boxColor : $genBlue,
+    //padding
+      $boxPadding : 2.1875rem,
+       $boxMargin : 1.25rem 3.125rem,
+       $boxBorder : 0rem solid $black,
+    //align
+     $boxTxtAlign : center,
+    $boxTxtShadow : .0625rem .0625rem rgba(0,0,0,0.3),
+      $boxBRadius : .1875rem,
+    //box properties
+      $boxOpacity : 1,
+       $boxShadow : .125rem .125rem .125rem rgba(0, 0, 0, 0.25),
+   $boxTransition : 0.2s ease all){
     
-        height: $heightBox;
-        width: $widthBox;
-        min-height: $minHeightBox;
-        min-width: $minWidthBox;
-        background-color: $bgColorBox;
-        color: $colorBox;
-        padding: $paddingBox;
-        margin: $marginBox;
-        border: $borderBox;
-        text-align: $txtAlignBox;
-        border-radius: $bRadiusBox;
-        opacity: $opacityBox;
+//================== variables ================   
+    //box size
+        height: $boxHeight;
+        width: $boxWidth;
+        min-height: $boxMinHeight;
+        min-width: $boxMinWidth;
+        max-height: $boxMaxHeight;
+        max-width: $boxMaxWidth;
+    //colors
+        background-color: $boxBgColor;
+        color: $boxColor;
+    //padding
+        padding: $boxPadding;
+        margin: $boxMargin;
+        border: $boxBorder;
+    //align
+        text-align: $boxTxtAlign;
+        text-shadow: $boxTxtShadow;
+        border-radius: $boxBRadius;
+    //box properties
+        opacity: $boxOpacity;
         box-shadow: $boxShadow;
-        transition: $transitionBox;
+        transition: $boxTransition;
+
+}
+
+@mixin button2(
+    //default properties
+      $btnDisplay : flex,
+$btnTxtDecoration : none,
+        $btnColor : $lightGrey,                       
+      $btnBgColor : $genBlue,
+      //$btnPadding : .625rem 1.875rem,
+       $btnMargin : 1.5625rem 1.5625rem,
+      $btnOpacity : 0.8,
+   $btnTransition : 0.4s ease all)
+                      {
+
+//================== variables ================   
+    //mixin button
+        display: $btnDisplay;
+        text-decoration: $btnTxtDecoration;
+        color: $btnColor;
+        background-color: $btnBgColor;
+        //padding: $btnPadding;
+        margin: $btnMargin;
+        opacity: $btnOpacity;
+        transition: $btnTransition;
+        @include boxShadow();
 
 
+}
+
+@mixin button(
+          $btnDisplay : flex,
+          $btnPadding : .625rem 1.875rem,
+           $btnMargin : 1.5625rem 1.5625rem,
+            $btnColor : $lightGrey,
+          $btnBgColor : $peaGreen,
+    $btnTxtDecoration : none,
+           $btnBorder : 1px solid rgba(255,255,255,0.5)
+){
+
+//================== variables ================   
+        display: $btnDisplay;
+        padding: $btnPadding;
+        margin: $btnMargin;
+        text-decoration: $btnTxtDecoration;
+        color: $btnColor;
+        border: $btnBorder;
+         
+}
+
+
+@mixin cuatroTercios(){
+    @media screen and (max-width: 1490px){
+        @content;
+    }
+}
+@mixin tablet(){
+    @media screen and (max-width: 920px){
+        @content;
+    }
+}
+
+@mixin movil(){
+    @media screen and (max-width: 784px){
+        @content;
+    }
+}
+
+@mixin responsive($rWidth : 100%, $rMaxWidth : 22rem, $rMaxHeight : auto){
+        
+        width: $rWidth;
+        max-width: $rMaxWidth;
+        height: $rMaxHeight;
 }

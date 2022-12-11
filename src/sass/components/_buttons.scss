@@ -1,0 +1,116 @@
+/* Elementos de la barra de navegacion */ 
+.navLinks {
+            
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding-right: 1.125rem;
+
+
+
+    #register {
+                
+        display: inline-block;
+        text-decoration: none;
+        color: $lightGrey;
+        margin: 0rem 1.5625rem;  
+        background: $peaGreen;
+        opacity: 0.8;
+        transition: 0.4s;
+        padding: .625rem 1.875rem;
+        @include movil(){
+            display: none;
+            
+        }
+        @include boxShadow();
+
+
+        &:hover {
+            color: $black;
+            background-color: $green;
+            opacity: 1;
+            transition: 0.4s;
+            @include boxShadow();
+        }
+
+        
+    }
+
+    .navItem {
+
+        margin: 0rem .1875rem 0rem 0rem;
+        transition: 0.4s;
+        @include movil(){
+            display: none;
+            
+        }
+        
+        a {
+            @include button();
+            color: white;
+            margin: 0;
+            @include boxShadow(.1875rem .1875rem .1875rem rgba(0, 0, 0, 0.25), .125rem, 0.2);
+        }
+        
+            &:hover {
+                background-color: $steelBlue;
+                transition: 0.4s;
+                opacity: 1;
+                @include boxShadow();
+
+            
+            }
+        }
+    
+}
+    
+.loginLinks {
+    display: flex;
+
+    list-style: none;
+    align-items: bottom;
+    justify-content: center;
+
+    @include movil(){
+        display: none;
+            
+    }
+
+
+    
+    #user {
+        
+        display: inline-block;
+        text-decoration: none;
+        color: $lightGrey;
+        margin: 0rem 1.5625rem;  
+        background: $peaGreen;
+        opacity: 0.8;
+        transition: 0.4s;
+        @include boxShadow();
+
+        &:hover {
+            color: $black;
+            background-color: $green;
+            opacity: 1;
+            transition: 0.4s;
+            @include boxShadow();
+        }
+    }
+
+    .loginItem {
+        
+        margin: 0rem 0rem 0rem 0rem;
+        transition: 0.4s;
+        
+        a {
+        @include button();
+        background-color: $steelBlue;
+        color: white;
+        
+        @include boxShadow(.1875rem .1875rem .1875rem rgba(0, 0, 0, 0.25), .125rem, 0.2);
+        }
+  
+    
+    }
+}
