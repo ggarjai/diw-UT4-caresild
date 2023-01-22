@@ -80,7 +80,11 @@ main{
     
         }
     
+
+
     }
+
+
     
     
     .slider2 {
@@ -90,7 +94,8 @@ main{
         object-fit: cover;
         margin-bottom: 1.875rem;
         @include movil(){
-            width: 150%;
+            width: 100%;
+            padding-top: 0.5rem;
             max-height: 12.75rem;
             object-fit: cover;
             margin-bottom: 0.875rem;

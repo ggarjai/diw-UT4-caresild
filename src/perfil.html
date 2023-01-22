@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./sass/main.scss">
+    
+    <title>Caresild</title>
+</head>
+<body>        
+    <header>
+        <nav>
+            <ul class="navLinks navLogo">
+            <li><a href="http://localhost:1234/#" class="logo">
+                <img class="logo" src="./img/caresild-tr-logo.png" alt="Caresild logo"></a></li>
+                                <li><h2>CARESILD</h2></li>
+            </ul>
+            <ul class="navLinks">
+                <li class="search"><input class="input" type="search"></li>
+                <li class="navItem"><a href="./login.html">Acceder</a></li>
+                <li id="register"><a href="./registro.html">Registro</a></li>
+                <li><a href="#"><img class="carrito" src="./img/cart-icon.png" alt="cart"></a></li>
+                <div class="dropdown">
+                    <a href="#"><img class="burgerMenu" src="./img/menu-hamburger.svg" alt="burger-menu"></a>
+                    <div class="dropdown-content">
+                      <a href="./index.html">Inicio</a>
+                      <a href="./perfil.html">Mi perfil</a>
+                      <a href="#">Mis próximas citas</a>
+                      <a href="./contacto.html">Contacto</a>
+                    </div>
+                  </div>
+
+            </ul>
+            
+        </nav>
+    </header>
+    <main class="perfil">
+        <img id="desktop" src="./img/national-institute.jpg" alt="buildings">
+
+        <section class="profile-container">
+            <article class="profile">
+            
+                <ul class="profile-box">
+                        <img src="./img/user-image.png">
+                    <li>
+                        <h2>Mi perfil</h2>
+                        <p>Bienvenido, Guillermo Garay</p>
+                        <h3>Médico asignado:</h3>
+                        <p>Antonio García</p>
+                        <p><img src="./img/medic-profile.svg"> <img src="./img/telephone-forward.svg"> <img src="./img/file-report.svg"></p>
+                    </li>
+                </ul>
+                
+                
+            </article>
+            <article class="profile">
+            
+                <ul class="profile-functions">
+
+                        <li>
+                            <h3>Cambiar contraseña:</h3>
+                        </li>
+                        <li>    
+                            <label for="new-password">Nueva contraseña:</label>
+                            <input class="inputForm" type="password" placeholder="Introduce tu nueva contraseña">
+                        </li>
+                        <li>
+                            <label for="password">Contraseña actual:</label>
+                            <input class="inputForm" type="password" placeholder="Introduce tu contraseña actual">
+                        </li>
+
+                </ul>
+                
+                
+            </article>
+        </section>
+    </main>
+    <footer>
+        <section class="blackFooter">
+                <div class="icons">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="steelblue" class="bi bi-facebook" viewBox="0 0 16 16">
+                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="steelblue" class="bi bi-telegram" viewBox="0 0 16 16">
+                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1200 1200"><path fill="steelblue" d="M600 0C268.629 0 0 268.629 0 600s268.629 600 600 600s600-268.629 600-600S931.371 0 600 0zM384.375 238.33c12.362-.729 23.536 6.66 32.007 19.775l82.031 155.566c8.637 18.434 3.729 38.172-9.155 51.343l-37.573 37.573c-2.319 3.178-3.845 6.757-3.882 10.693c14.409 55.775 58.117 107.223 96.681 142.603c38.562 35.38 80.009 83.281 133.812 94.629c6.65 1.855 14.797 2.52 19.556-1.903l43.652-44.458c15.068-11.421 36.866-16.956 52.954-7.617h.732l148.021 87.378c21.728 13.619 23.979 39.944 8.423 55.957L849.683 941.016c-15.056 15.44-35.058 20.631-54.491 20.654c-85.948-2.575-167.158-44.759-233.862-88.11c-109.49-79.653-209.923-178.446-272.975-297.803c-24.182-50.05-52.589-113.91-49.878-169.774c.242-21.016 5.928-41.605 20.728-55.151l101.953-101.953c7.942-6.758 15.799-10.111 23.217-10.549z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="steelblue" d="M12 2c2.717 0 3.056.01 4.122.06c1.065.05 1.79.217 2.428.465c.66.254 1.216.598 1.772 1.153a4.908 4.908 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428c.047 1.066.06 1.405.06 4.122c0 2.717-.01 3.056-.06 4.122c-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 0 1-1.153 1.772a4.915 4.915 0 0 1-1.772 1.153c-.637.247-1.363.415-2.428.465c-1.066.047-1.405.06-4.122.06c-2.717 0-3.056-.01-4.122-.06c-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 0 1-1.772-1.153a4.904 4.904 0 0 1-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122c.05-1.066.217-1.79.465-2.428a4.88 4.88 0 0 1 1.153-1.772A4.897 4.897 0 0 1 5.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 5a5 5 0 1 0 0 10a5 5 0 0 0 0-10zm6.5-.25a1.25 1.25 0 0 0-2.5 0a1.25 1.25 0 0 0 2.5 0zM12 9a3 3 0 1 1 0 6a3 3 0 0 1 0-6z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="steelblue" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M19.5 7A8.998 8.998 0 0 0 12 3a8.991 8.991 0 0 0-7.484 4"/><path d="M11.5 3a16.989 16.989 0 0 0-1.826 4M12.5 3a16.989 16.989 0 0 1 1.828 4.004M19.5 17a8.998 8.998 0 0 1-7.5 4a8.991 8.991 0 0 1-7.484-4"/><path d="M11.5 21a16.989 16.989 0 0 1-1.826-4m2.826 4a16.989 16.989 0 0 0 1.828-4.004M2 10l1 4l1.5-4L6 14l1-4m10 0l1 4l1.5-4l1.5 4l1-4M9.5 10l1 4l1.5-4l1.5 4l1-4"/></g></svg>
+                </div>
+                <div class="contact">
+                    <p>Asistencia telefónica<p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="steelblue" d="M20 10.999h2C22 5.869 18.127 2 12.99 2v2C17.052 4 20 6.943 20 10.999z"/><path fill="steelblue" d="M13 8c2.103 0 3 .897 3 3h2c0-3.225-1.775-5-5-5v2zm3.422 5.443a1.001 1.001 0 0 0-1.391.043l-2.393 2.461c-.576-.11-1.734-.471-2.926-1.66c-1.192-1.193-1.553-2.354-1.66-2.926l2.459-2.394a1 1 0 0 0 .043-1.391L6.859 3.513a1 1 0 0 0-1.391-.087l-2.17 1.861a1 1 0 0 0-.29.649c-.015.25-.301 6.172 4.291 10.766C11.305 20.707 16.323 21 17.705 21c.202 0 .326-.006.359-.008a.992.992 0 0 0 .648-.291l1.86-2.171a1 1 0 0 0-.086-1.391l-4.064-3.696z"/></svg>
+                    <p>693 182 394</p>
+                </div>            
+        </section>
+        <section class="blueFooter">
+            <ul class="links">
+                <li>
+                <a href="http://localhost:1234/#">Pagos</a>
+                </li>
+                <li>
+                <a href="http://localhost:1234/#">Seguros de vida</a>
+                </li>
+                <li>
+                
+                </li>
+                <li>
+                    <a href="http://localhost:1234/#">Referir a un paciente</a>
+                </li>
+                <li>
+                    <a href="http://localhost:1234/#">Acceso pacientes</a>
+                </li>
+                <li>
+                    <a href="http://localhost:1234/#">Calendario de eventos</a>
+                </li>
+                <li>
+                    
+                </li>
+                <li>
+                    <a href="http://localhost:1234/#">Términos de uso</a>
+                </li>
+            </ul>
+            <ul class="links">
+                <li>
+                    <a href="http://localhost:1234/#">Consultoría</a>
+                </li>
+                <li>
+                    <a href="http://localhost:1234/#">Asistencia financiera</a>
+                </li>
+                <li>
+                    
+                </li>
+                <li>
+                    <a href="http://localhost:1234/#">Legal</a>
+                </li>
+            </ul>
+            <ul class="links">
+
+                <li>
+                    <a href="http://localhost:1234/#">Política de privacidad</a>
+                </li>
+            </ul>
+            <ul class="links">
+                <li>
+                    <a href="http://localhost:1234/#">Centro de opiniones</a>
+                </li>
+                <li>
+
+                </li>
+                <li>
+                <a href="http://localhost:1234/#">Sobre nosotros</a>
+                </li>
+                <li>
+                <a href="http://localhost:1234/#">Experiencia del usuario</a>
+                </li>
+            </ul>
+        </section>
+    </footer>

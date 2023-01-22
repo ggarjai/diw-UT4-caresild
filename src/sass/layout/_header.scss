@@ -15,7 +15,7 @@ nav {
 
 
     z-index: 2;
-    box-shadow: .125rem .125rem 1.25rem;
+    
 
     @include boxShadow(0rem .75rem .5625rem rgba(0, 0, 0, 0.4), .125rem, 0);
 
@@ -144,6 +144,13 @@ nav {
             }
         }
 
+        .burgerMenu {
+
+            max-height: 42px;
+            padding-left: 15px;
+            width: auto;
+
+        }
 
 
 
@@ -153,5 +160,53 @@ nav {
     .navLogo {
         justify-content: left;
     }
+
+
+
+      
+      .dropdown {
+        position: relative;
+        display: inline-block;
+        
+        &:hover {
+            .dropdown-content {
+                display: block;
+            }
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            z-index: 1;
+            right: 0;
+            background-color: #f9f9f9;
+            min-width: 250px;
+
+    
+         
+            a {
+                font-weight: 500;
+                color: $genBlue;
+                font-size: 20px;
+                padding: 16px 10px;
+                text-decoration: none;
+                text-align: center;
+                display: block;
+                &:hover {
+                    background-color: $genBlue;
+                    color: $lightGrey;
+                    font-weight: 600;
+                }
+              }
+        }
+    }
+
+
+      
+
+      
+
+
+
 
 }
